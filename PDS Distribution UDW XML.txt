@@ -1,0 +1,119 @@
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;SIS - Term Registration&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="c29b5c586d8247313">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">"Student"."N Number"</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="ccca47d50c276e7b6">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">"Term"."Academic Year Label"</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Term</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Year</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cdfab982aeb81e7a8">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">"Study Away"."Study Away NYU or Visiting Student"</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c10a1d647e366a221">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">CASE "Study Away"."Study Away Agreement" WHEN 'NYU London' THEN 'Anglophone' WHEN 'NYU Washington Square' THEN 'Anglophone' WHEN 'NYU Sydney' THEN 'Anglophone' WHEN 'NYU Washington DC' THEN 'Anglophone' WHEN 'NYU Los Angeles CA' THEN 'Anglophone' WHEN 'Go Local: London' THEN 'Anglophone' WHEN 'Go Local: New York' THEN 'Anglophone' WHEN 'Go Local: Sydney' THEN 'Anglophone' WHEN 'Go Local: New York' THEN 'Anglophone' WHEN 'Go Local: Washington, DC' THEN 'Anglophone' WHEN 'Go Local: Los Angeles' THEN 'Anglophone' WHEN 'NYU Tulsa' THEN 'Anglophone' ELSE 'Language' END</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Study Away</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Language or Anglophone</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c4fa0bbbc19f2d703">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">CASE "Study Away"."Study Away City" WHEN 'Abu Dhabi' THEN 'Portal' WHEN 'New York' THEN 'Portal' WHEN 'Shanghai' THEN 'Portal' ELSE 'Site' END</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Study Away</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Portal vs Site</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="ca78c904c840586d6">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">"Study Away"."Study Away Agreement Code"</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cde6d7697d3d1b081">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">"Student Organization"."Student Academic Group"</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c916f948fc4c99aa4">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">"Student Organization"."Student School"</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cdefff05813a77d46">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">"CPP"."Primary Plan"</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c698754e424990eb7">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">"CPP"."Primary Plan Code"</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c005be2c781f09eba">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">"Categories"."Academic Level"</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c7b6a4cfdb9fd992d">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">"Categories"."New/Continuing Type"</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="ce0580c28e3c38816">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">"Term Registration Facts"."Active Units"</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c3d3f67837c937cf8">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">"Cumulative Metrics"."Cumulative GPA"</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c1d5aa8714313b546">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">"Demographics"."Legal Sex"</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cbdb473ed558fdd01">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">"Demographics"."IPEDS Ethnicity Code"</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Demographics</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>IPEDS Ethnicity</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns>
+      <saw:filter>
+         <sawx:expr xsi:type="sawx:logical" op="and">
+            <sawx:expr xsi:type="sawx:comparison" op="equal">
+               <sawx:expr xsi:type="sawx:sqlExpression">"Term"."Term"</sawx:expr>
+               <sawx:expr xsi:type="xsd:string">Spring 2026</sawx:expr></sawx:expr>
+            <sawx:expr xsi:type="sawx:list" op="notIn">
+               <sawx:expr xsi:type="sawx:sqlExpression">"Study Away"."Study Away Agreement Code"</sawx:expr>
+               <sawx:expr xsi:type="xsd:string">-</sawx:expr>
+               <sawx:expr xsi:type="xsd:string">REG-REMOTE</sawx:expr></sawx:expr></sawx:expr></saw:filter></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="titleView!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="tableView!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1"/>
+      <saw:view xsi:type="saw:tableView" name="tableView!1">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c29b5c586d8247313"/>
+                  <saw:edgeLayer type="column" columnID="ccca47d50c276e7b6"/>
+                  <saw:edgeLayer type="column" columnID="cdfab982aeb81e7a8"/>
+                  <saw:edgeLayer type="column" columnID="cde6d7697d3d1b081"/>
+                  <saw:edgeLayer type="column" columnID="cdefff05813a77d46"/>
+                  <saw:edgeLayer type="column" columnID="c698754e424990eb7"/>
+                  <saw:edgeLayer type="column" columnID="c005be2c781f09eba"/>
+                  <saw:edgeLayer type="column" columnID="ce0580c28e3c38816"/>
+                  <saw:edgeLayer type="column" columnID="c3d3f67837c937cf8"/>
+                  <saw:edgeLayer type="column" columnID="c1d5aa8714313b546"/>
+                  <saw:edgeLayer type="column" columnID="cbdb473ed558fdd01"/>
+                  <saw:edgeLayer type="column" columnID="c10a1d647e366a221"/>
+                  <saw:edgeLayer type="column" columnID="c4fa0bbbc19f2d703"/>
+                  <saw:edgeLayer type="column" columnID="c7b6a4cfdb9fd992d"/>
+                  <saw:edgeLayer type="column" columnID="ca78c904c840586d6"/>
+                  <saw:edgeLayer type="column" columnID="c916f948fc4c99aa4"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column"/></saw:edges></saw:view></saw:views></saw:report>
